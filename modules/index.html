@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>eeeeee</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+
+  <body style="text-align: center">
+    <div style="background-color: #f58c5b; padding: 30px">
+      <header>
+        <button style="margin: 15px">Click here</button>
+
+        <button id="normal" style="margin: 15px">Click here</button>
+      </header>
+    </div>
+    <h1 style="color: #d87649">teste</h1>
+
+    <script>
+      $("button").on("click", function () {
+        $("body").css("background", "#ccc");
+        $("h1").css("color", "#8da3eb");
+        $("h1").css("fontSize", "80px");
+        $("div").css("background", "#2b9fe2");
+      });
+      $("#normal").on("click", function () {
+        $("body").css("background", "#ffffff");
+        $("h1").css("color", "#d87649");
+        $("h1").css("fontSize", "32px");
+        $("div").css("background", "#f58c5b");
+      });
+    </script>
+  </body>
+</html>
