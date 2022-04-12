@@ -1,11 +1,6 @@
 # Baixa Visão e Surdez
 
-<div style="display: grid; grid-template-columns: 300px 300px; grid-template-rows: 300px 300px;">
-  <img src="" style="width: 250px; height: 300px;">
-  <img src="" style="width: 250px; height: 300px;">
-  <img src="" style="width: 250px; height: 300px; margin-top: 10px;">
-  <img src="" style="width: 250px; height: 300px; margin-top:10px;">
-</div>
+<img src="./images/site.png" alt="Print da página">
 
 <br>
 
