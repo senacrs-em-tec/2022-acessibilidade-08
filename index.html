@@ -6,19 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Baixa Visão e Daltonismo</title>
     <link rel="stylesheet" href="style.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   </head>
   <body>
     <header>
       <nav>
-        <a href="#inicio">Início</a>
-        <a href="#baixa-visao">Baixa Visão</a>
-        <a href="#daltonismo">Daltonismo</a>
-        <a href="#referencias">Referências</a>
+        <a class="botoes" href="#inicio">Início</a>
+        <a class="botoes" href="#baixa-visao">Baixa Visão</a>
+        <a class="botoes" href="#daltonismo">Daltonismo</a>
+        <a class="botoes" href="#referencias">Referências</a>
+        <button id="Contraste" style="margin: 15px" padding="8px">
+          Contraste Escuro
+        </button>
+        
+        <button id="Daltonismo" style="margin: 15px"  padding="8px">
+          Daltonismo
+        </button>
+        
+        <button id="Normal" style="margin: 15px" padding="8px">
+          Visão Normal
+        </button>
+        <script>
+          $("#Contraste").on("click", function () {
+            $("body").css("background", "#080101");
+            $("p").css("color", "#ffffff");
+            $("h1").css("color", "#ffffff");
+            $("h2").css("color", "#ffffff");
+            $("h3").css("color", "#ffffff");
+            $("li").css("color", "#ffffff");
+            $("a").css("color", "#ffffff");
+            $(".botoes").css("color", "#FFFF00");
+            $(".title").css("background", "#080101");
+            $("button").css("background", "#ffffff");
+            $("button").css("color", "#080101");
+            });
+            $("#Daltonismo").on("click", function () {
+            $("body").css("background", "#FF7F00");
+            $("h1").css("color", "#0000FF");
+            $("h2").css("color", "#0000FF");
+            $("h3").css("color", "#0000FF");
+            $("li").css("color", "#0000FF");
+            $("p").css("color", "#0000FF");
+            $("a").css("color", "#0000FF");
+            $(".botoes").css("color", "#FF7F00");
+            $("button").css("background", "#FF7F00");
+            $("button").css("color", "#0000FF");
+            $(".title").css("background", "#ff7f00");
+            });
+            $("#Normal").on("click", function () {
+            $("body").css("background", "#e2e2e2");
+            $("h1").css("color", "#FFFFFF");
+            $("h2").css("color", "#000000");
+            $("h3").css("color", "#000000");
+            $("li").css("color", "#000000");
+            $("p").css("color", "#000000");
+            $("a").css("color", "#000000");
+            $(".botoes").css("color", "#FFFFFF");
+            $("button").css("background", "#FFFFFF");
+            $("button").css("color", "#080101");
+            $(".inicio").css("background", "#373737");
+            $("title").css("background", "#000000")
+            });
+            </script>
       </nav>
+      <div class="btn-container">
+        <button name="increase-font" id="increase-font" title="Aumentar fonte">A+</button>
+        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A-</button>
+      </div>
     </header>
     <main>
       <div class="title" id="inicio">
-        <h1 id="titulo">Baixa Visão e Daltonismo</h1>
+        <h1 class="titulo">Baixa Visão e Daltonismo</h1>
       </div>
       <div class="low-vision" id="baixa-visao">
         <section class="low-vision-text">
@@ -26,12 +84,12 @@
           <p>
             A deficiência física de baixa visão ou de visão subnormal é aquela
             em que o indivíduo não consegue corrigir a sua visão por óculos
-            convencionais, medicação ou cirurgia.(DOURINA, Fundação) 
+            convencionais, medicação ou cirurgia.(DOURINA, 2022) 
             Pode ser uma perda de visão ou enfraquecimento visual que causa incapacidade 
             funcional e diminui desempenho visual, podendo ser adquirida no nascimento, através da
             genética familiar ou por doenças, como o diabetes descolamento de
             retina, glaucoma, catarata, degeneração senil de mácula, traumas
-            oculares. (FCM UNICAMP)
+            oculares. (FCM UNICAMP, 2022)
           </p>
         </section>
         <section class="low-vision-img">
@@ -52,7 +110,7 @@
           <p>
             Uma das melhores formas de gerar acessibilidade para pessoas com
             baixa visão, é a ampliação de letras, números, imagens e carácteres
-            no geral. (FCM UNICAMP)
+            no geral (FCM UNICAMP, 2022).
           </p>
         </section>
       </div>
@@ -71,7 +129,7 @@
             deslocamento da retina, tumores cerebrais ou lesões neurológicas.
             Até agora não existem curas nem tratamentos específicos, mas as
             lentes com filtro de cor podem ajudar o portador a melhorar um pouco
-            o contraste. (VARELLA, Bruna 2021)
+            o contraste. (VARELLA,2022)
           </p>
           <h3>Tipos de Daltonismo:</h3>
           <ul>
@@ -85,7 +143,7 @@
             </li>
             <li>
               Tritanopia – dificuldade para enxergar os diferentes tons de azul
-              e o amarelo, que adquire tons rosados.  (VARELLA, Bruna 2021)
+              e o amarelo, que adquire tons rosados (VARELLA,2021).
             </li>
           </ul>
         </section>
@@ -110,13 +168,16 @@
             por meio de cores. Para destacar uma informação de um texto, por
             exemplo, podemos apenas sublinhar a frase ou palavra e nos atentar
             no contraste entre o fundo da página e a fonte, pois pode dificultar
-            a leitura. (HANDTALK)
+            a leitura (HANDTALK,2021).
           </p>
         </section>
       </div>
+     <br>
+
+     
       <hr>
       <div class="references" id="referencias">
-        <h1>Referências</h1>
+        <h2>Referências</h2>
         <section class="link">
           <p>VARELLA, Bruna. <strong>Daltonismo (2021)</strong></p>
           <a href="https://drauziovarella.uol.com.br/doencas-e-sintomas/daltonismo/#:~:text=Daltonismo%20%C3%A9%20um%20dist%C3%BArbio%20da,o%20azul%20e%20o%20amarelo">Disponível em https://drauziovarella.uol.com.br/doencas-e-sintomas/daltonismo/#:~:text=Daltonismo%20%C3%A9%20um%20dist%C3%BArbio%20da,o%20azul%20e%20o%20amarelo"</a>
@@ -140,6 +201,10 @@
 
       </div>
     </main>
+
+   
+
     <footer></footer>
+    <script src="./script.js"></script>
   </body>
 </html>
