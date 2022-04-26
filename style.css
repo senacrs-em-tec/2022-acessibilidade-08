@@ -108,6 +108,18 @@ hr{
     height: 12.3rem;
 }
 
+.documentos{    
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.documentos p{
+  margin-top: 0.625rem;
+  margin-bottom: 0.938rem;
+}
+
 
 /* REFERÊNCIAS */
 .references{
@@ -124,4 +136,7 @@ hr{
 .link a{
   text-decoration: none;
   color: black;
+}
+a{
+  color: #080101;
 }
