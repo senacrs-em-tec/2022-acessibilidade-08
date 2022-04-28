@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   </head>
   <body>
-    <header>
+    <header  style="position: fixed">
       <nav>
         <a class="botoes" href="#inicio">Início</a>
         <a class="botoes" href="#baixa-visao">Baixa Visão</a>
@@ -27,6 +27,14 @@
         <button id="Normal" style="margin: 15px" padding="8px">
           Visão Normal
         </button>
+        <div class="btn-container">
+          <button name="increase-font" id="increase-font" title="Aumentar fonte">
+            A+
+          </button>
+          <button name="decrease-font" id="decrease-font" title="Diminuir fonte">
+            A-
+          </button>
+        </div>
         <script>
         
           $("#Contraste").on("click", function () {
@@ -74,14 +82,7 @@
       </nav>
     </header>
     <main>
-      <div class="btn-container" style="position: fixed">
-        <button name="increase-font" id="increase-font" title="Aumentar fonte">
-          A+
-        </button>
-        <button name="decrease-font" id="decrease-font" title="Diminuir fonte">
-          A-
-        </button>
-      </div>
+     
       <div class="title" id="inicio">
         <h1 class="titulo">Baixa Visão e Daltonismo</h1>
       </div>
@@ -185,9 +186,149 @@
         <h2 class="documentos">Documentação</h2>
         <br>
         
-        <a href= "https://senacrsedu-my.sharepoint.com/:w:/g/personal/60127658009_senacrs_edu_br/EWi52Bg6xndNn84Wc7JkzagBF_Ox9JlLoh9a8H_elOc2lQ?e=wKJ9FM"
-          >https://senacrsedu-my.sharepoint.com/:w:/g/personal/60127658009_senacrs_edu_br/EWi52Bg6xndNn84Wc7JkzagBF_Ox9JlLoh9a8H_elOc2lQ?e=wKJ9FM</a>
-      </div>
+      <div class="highlight">
+        <p> Desenvolvemos nossa ferramenta usando códigos Html, Css e Java Script.
+          Para construir a ferramenta que aumenta e diminui a fonte do site, construímos um
+          botão usando Html, e demos sua funcionalidade através do Java Script.</p>
+          Código:
+          <h4>Html:</h4>
+          <br>
+          <code>
+          &lt;div class="btn-container"&gt;<br>
+          &lt;button name="increase-font" id="increase-font" title="Aumentar fonte">A+ &lt; /button &gt;<br>
+          &lt;button name="decrease-font" id="decrease-font" title="Diminuir fonte">A-  &lt; /button &gt;<br>
+          &lt;/div &gt;
+        </code>
+          <h4>Javascript:</h4>
+          <br>
+          <code>
+          window.onload = function() {<br>
+          var elementBody = document.querySelector('body');<br>
+          var elementBtnIncreaseFont = document.getElementById('increase-font');<br>
+          var elementBtnDecreaseFont = document.getElementById('decrease-font');<br>
+          
+          var fontSize = 100;<br>
+          var increaseDecrease = 10;<br>
+         
+          elementBtnIncreaseFont.addEventListener('click', function(event) {<br>
+          fontSize = fontSize + increaseDecrease;<br>
+          elementBody.style.fontSize = fontSize + '%';<br>
+          });<br>
+         
+          elementBtnDecreaseFont.addEventListener('click', function(event) {<br>
+          fontSize = fontSize - increaseDecrease;<br>
+          elementBody.style.fontSize = fontSize + '%';<br>
+          });
+          }
+        </code>
+        <p>Para desenvolver a funcionalidade que se adapta a deficiência que nos foi proposta, montamos três botões no html, um que mantinha a página em sua versão original, outro que tornava as cores adaptadas para pessoas com daltonismo, e outro que dava a página alto contraste.</p>
+        <h4>Código:</h4>
+        <br>
+        <code> &lt;button id="Contraste" style="margin: 15px" padding="8px"&gt;Contraste Escuro &lt;button&gt;<br>
+          
+          &lt;button id="Daltonismo" style="margin: 15px" padding="8px"&gt;Daltonismo &lt;/button&gt;<br>
+          
+          &lt;button id="Normal" style="margin: 15px" padding="8px"&gt; Visão Normal &lt;/button&gt;<br>
+          
+          &lt;script&gt;<br>
+          
+          $("#Contraste").on("click", function () {<br>
+          
+          $("body").css("background", "#080101");<br>
+          
+          $("p").css("color", "#ffffff");<br>
+          
+          $("h1").css("color", "#ffffff");<br>
+          
+          $("h2").css("color", "#ffffff");<br>
+          
+          $("h3").css("color", "#ffffff");<br>
+          
+          $("li").css("color", "#ffffff");<br>
+          
+          $("a").css("color", "#ffffff");<br>
+          
+          $(".botoes").css("color", "#FFFF00");<br>
+          
+          $("div").css("background", "#080101");<br>
+          
+          $("button").css("background", "#ffffff");<br>
+          
+          $("button").css("color", "#080101");<br>
+          
+          });
+          <br>
+          $("#Daltonismo").on("click", function () {<br>
+          
+          $("body").css("background", "#FF7F00");<br>
+          
+          $("h1").css("color", "#0000FF");<br>
+          
+          $("h2").css("color", "#0000FF");<br>
+          
+          $("h3").css("color", "#0000FF");<br>
+          
+          $("li").css("color", "#0000FF");<br>
+          
+          $("p").css("color", "#0000FF");<br>
+          
+          $("a").css("color", "#0000FF");<br>
+          
+          $(".botoes").css("color", "#FF7F00");<br>
+          
+          $("button").css("background", "#FF7F00");<br>
+          
+          $("button").css("color", "#0000FF");<br>
+          
+          $("div").css("background", "#ff7f00");<br>
+          
+          });
+          <br>
+          $("#Normal").on("click", function () {<br>
+          
+          $("body").css("background", "#e2e2e2");<br>
+          
+          $("h1").css("color", "#000000");<br>
+          
+          $("h2").css("color", "#000000");<br>
+          
+          $("h3").css("color", "#000000");<br>
+          
+          $("li").css("color", "#");<br>
+          
+          $("p").css("color", "#000000");<br>
+          
+          $("a").css("color", "#000000");<br>
+          
+          $(".botoes").css("color", "#FFFFFF");<br>
+          
+          $("button").css("background", "#FFFFFF");<br>
+          
+          $("button").css("color", "#080101");<br>
+          
+          $("div").css("background", "#e2e2e2");<br>
+          
+          $("title").css("background", "#373737")<br>
+          
+          });
+          
+          &lt; script &gt;<br>
+          
+          &lt;nav&gt;<br>
+          
+          &lt;div class="btn-container"&gt;<br>
+          
+          &lt;button name="increase-font" id="increase-font" title="Aumentar fonte">A+&lt;/button&gt;<br>
+          
+          &lt;button name="decrease-font" id="decrease-font" title="Diminuir fonte">A-&lt;/button&gt;<br>
+          
+          </div>
+         
+        </code>
+        
+        
+        
+      </div> 
        
       <hr/>
       <div class="references" id="referencias">
